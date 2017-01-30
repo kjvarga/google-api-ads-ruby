@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "akami",    "~> 1.2"
   s.add_dependency "gyoku",    "~> 1.2"
 
-  s.add_dependency "builder",  "~> 3.2"
+  s.add_dependency "builder",  ">= 3.0" # KJV modified to prevent incompatible builder version issues
   s.add_dependency "nokogiri", "~> 1.6"
 
   s.add_development_dependency "rake",    "~> 10.1"
