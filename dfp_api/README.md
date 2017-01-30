@@ -1,5 +1,11 @@
 # Google's DoubleClick For Publishers API Ruby Client Library
 
+## Customized version
+
+This is a stock v0.19.0 clone with the gemspec's Ruby requirement relaxed so it runs under Ruby 1.9.3.
+
+***
+
 Google's DoubleClick For Publishers API service lets developers design computer
 programs that interact directly with the DFP platform. With these applications,
 advertisers and third parties can more efficiently -- and creatively -- manage

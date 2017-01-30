@@ -1,5 +1,11 @@
 # Google AdsCommon Library
 
+## Customized version
+
+This is a stock v0.12.6 clone with the gemspec's Ruby requirement relaxed so it runs under Ruby 1.9.3.
+
+***
+
 This gem is a dependency for the new generation of Ruby Google Ads client
 libraries. It contains common code shared among all of these libraries, such as
 authentication, SOAP stub generation, error handling, logging, etc.
