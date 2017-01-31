@@ -5,6 +5,32 @@
 This is a custom build modified from the `dfp_api-0.19.0` tag within the `google-api-ads-ruby`
 repository.
 
+Based on a branch created from tag `dfp_api-0.19.0`
+
+I then created separate git repositories within each of ads_savon, ads_common and dfp_api and pushed these
+to respective repositories in my github.  The only reason for that is so that in our Gemfile I can point
+to those git repos when specifying the gems.  The only other alternative is to vendor the gemfiles but
+that seems less easily maintainable by others.
+
+Then I pruned the git repo's subdirectories and pushed each one separately:
+
+### Ads Common
+
+    git filter-branch --prune-empty --subdirectory-filter ads_common refs/heads/dfp_api-0.19.0
+    git push git@github.com:kjvarga/google-ads-common.git refs/heads/dfp_api-0.19.0:master
+
+### DFP API
+
+    git reset --hard refs/original/refs/heads/dfp_api-0.19.0
+    git filter-branch -f --prune-empty --subdirectory-filter dfp_api refs/heads/dfp_api-0.19.0
+    git push git@github.com:kjvarga/google-dfp-api.git refs/heads/dfp_api-0.19.0:master
+
+### Ads Savon
+
+    git reset --hard refs/original/refs/heads/dfp_api-0.19.0
+    git filter-branch -f --prune-empty --subdirectory-filter ads_savon refs/heads/dfp_api-0.19.0
+    git push git@github.com:kjvarga/google-ads-savon.git refs/heads/dfp_api-0.19.0:master
+
 ***
 
 This project hosts the new Ads common framework for Ruby, as well as the Ruby
