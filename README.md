@@ -7,6 +7,10 @@ repository.
 
 Based on a branch created from tag `dfp_api-0.19.0`
 
+Command to push:
+
+    $ git push kjvarga refs/heads/dfp_api-0.19.0:master
+
 I then created separate git repositories within each of ads_savon, ads_common and dfp_api and pushed these
 to respective repositories in my github.  The only reason for that is so that in our Gemfile I can point
 to those git repos when specifying the gems.  The only other alternative is to vendor the gemfiles but
