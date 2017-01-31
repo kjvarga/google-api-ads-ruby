@@ -1,5 +1,12 @@
 # Ads API Client Libraries for Ruby
 
+## Customized version
+
+This is a custom build modified from the `dfp_api-0.19.0` tag within the `google-api-ads-ruby`
+repository.
+
+***
+
 This project hosts the new Ads common framework for Ruby, as well as the Ruby
 client libraries for the various SOAP-based Ads APIs at Google.
 
